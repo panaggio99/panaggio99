@@ -1,16 +1,27 @@
-## Hi there 👋
+# Привет, я Александр 👋
 
-<!--
-**panaggio99/panaggio99** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Junior Data Scientist (Москва). Строю ML-модели с жестким фокусом на предотвращение утечек данных (Data Leakage) и перевод качества модели в реальные бизнес-метрики.
 
-Here are some ideas to get you started:
+## Мой подход
+- **Временная валидация:** использование `TimeSeriesSplit` и кастомных сплитов вместо случайного `train_test_split`.
+- **Анти-leakage:** строгий контроль временных границ при джоинах (например, `pd.merge_asof`), чтобы модель не "подглядывала" в будущее.
+- **Бизнес-оптимизация:** настройка гиперпараметров и порогов классификации напрямую по экономическому эффекту или бизнес-ограничениям, а не только по ROC-AUC/Gini.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Проекты
+
+**[01. Прогноз отмен бронирований (UrbanStay)](https://github.com/panaggio99/01_hotel_booking_cancellation_prediction)**
+> Задача: спрогнозировать отмену брони на момент оформления для перепродажи номеров. 
+> Фишки: извлечение признаков из текстов прошлых отзывов (TF-IDF) с учетом времени, калибровка вероятностей (`Isotonic Regression`).
+> **Результат:** ROC-AUC 0.967. Модель принесла **+117.9 млн руб.** (Incremental Revenue +63%) при выполнении всех ограничений по загрузке отеля.
+
+**[02. Behavioral Scoring: прогноз дефолта (12 мес.)](https://github.com/panaggio99/02_behavioral_scoring_default_prediction)**
+> Задача: ежемесячная оценка риска дефолта действующих клиентов банка по транзакциям и макроданным.
+> Фишки: кастомный `GroupTimeSeriesSplit` (expanding window), подбор порога одновременного выполнения 3 бизнес-ограничений.
+> **Результат:** ROC-AUC 0.908. Модель позволила не создавать резервы на **~3.1 млрд руб.** (нетто-эффект ~2.7 млрд руб.).
+
+## Стек
+Python, Pandas, Scikit-learn, CatBoost, Optuna, Matplotlib/Seaborn
+
+## Контакты
+- Telegram: [panaggio99](https://t.me/panaggio99)
+- Email: panaggio99@gmail.com
