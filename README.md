@@ -19,9 +19,6 @@ Junior Data Scientist (Москва). Строю ML-модели с фокусо
 > Фишки: кастомный `GroupTimeSeriesSplit` (expanding window), подбор порога одновременного выполнения 3 бизнес-ограничений.
 > **Результат:** ROC-AUC 0.908. Модель позволила не создавать резервы на **~3.1 млрд руб.** (нетто-эффект ~2.7 млрд руб.).
 
-## Стек
-Python, Pandas, Scikit-learn, CatBoost, Optuna, Matplotlib/Seaborn
-
 ## Контакты
 - Telegram: [panaggio99](https://t.me/panaggio99)
 - Email: panaggio99@gmail.com
